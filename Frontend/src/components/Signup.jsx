@@ -28,6 +28,9 @@ function Signup() {
           toast.success("Signup Successfully");
           navigate(from, { replace: true });
         }
+
+        // we are storing info in local storage bcoz we want to access the info for course component in navbar
+        // bcoz we want to show that component to only registered (logged inn/signd in) user
         localStorage.setItem("Users", JSON.stringify(res.data.user));
       })
       .catch((err) => {

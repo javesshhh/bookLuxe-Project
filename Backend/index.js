@@ -8,7 +8,10 @@ import userRoute from "./route/user.route.js";
 
 const app = express();
 
+// to fetch communicate between frontend and backend hosted on different ports
 app.use(cors());
+
+//this is a middleware to convert data into json
 app.use(express.json());
 
 dotenv.config();
